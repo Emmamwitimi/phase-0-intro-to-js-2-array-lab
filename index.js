@@ -1,27 +1,43 @@
 // Write your solution here!
-const cats = ['Milo','Otis', 'Garfield'];
+// Initial array
+const cats = ["Milo", "Otis", "Garfield"];
 
-function destructivelyAppendCat(name){
+// Function to append a cat destructively
+function destructivelyAppendCat(name) {
     cats.push(name);
 }
-function destructivelyRemoveLastCat(name){
+
+// Function to prepend a cat destructively
+function destructivelyPrependCat(name) {
+    cats.unshift(name);
+}
+
+// Function to remove the last cat destructively
+function destructivelyRemoveLastCat() {
     cats.pop();
 }
-function destructivelyPrependCat(Ralph){
-    cats.unshift(Ralph);
-}
-function destructivelyRemoveFirstCat(){
+
+// Function to remove the first cat destructively
+function destructivelyRemoveFirstCat() {
     cats.shift();
 }
-function appendCat(name){
+
+// Function to append a cat non-destructively
+function appendCat(name) {
     return [...cats, name];
 }
-function prependCat(name){
-    return [name, ...cats]
+
+// Function to prepend a cat non-destructively
+function prependCat(name) {
+    return [name, ...cats];
 }
-function removeLastCat(){
-    return cats.slice(0, -1)
+
+// Function to remove the last cat non-destructively
+function removeLastCat() {
+    return cats.slice(0, cats.length - 1);
 }
-function removeFirstCat(){
-    return cats.slice(1)
+
+// Function to remove the first cat non-destructively
+function removeFirstCat() {
+    return cats.slice(1);
 }
